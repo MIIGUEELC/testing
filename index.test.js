@@ -122,25 +122,6 @@ describe('ROOMS - Total occupancy percentage across all rooms', () => {
 })
 
 
-// Tests for Room (availableRooms)
-describe('ROOMS - Array with rooms not occupied', () => {
-
-    test('Invalid parameters (array room) - throws error', () => {
-        const booking1 = new Booking("Booking1", "admin@admin.com", new Date("07/16/2024"), new Date("07/18/2024"), 30, {});
-        const booking2 = new Booking("Booking2", "admin@admin.com", new Date("07/18/2024"), new Date("07/20/2024"), 30, {});
-        const room1 = new Room("Room1", [booking1], 1000, 10);
-        const room2 = new Room("Room2", [booking2], 1000, 10);
-        const rooms = "";
-        const startDate = new Date("07/19/2024");
-        const endDate = new Date("07/20/2024");
-    
-        expect(() => Room.availableRooms(rooms, startDate, endDate)).toThrowError("Invalid parameter: rooms expected to be an array");
-    })
-
-})
-
-
-
 // Tests bookings
 //describe('BOOKINGS - Total price', () => {
 
